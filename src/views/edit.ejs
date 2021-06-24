@@ -1,0 +1,27 @@
+<%- include('partials/_header'); -%>
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-lg-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/edit/<%= task._id %>" method="POST">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Title</label>
+                                <input type="text" name="title" id="title" value="<%= task.title %>" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <input type="text" name="description" id="description" value="<%= task.description %>" class="form-control">
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-warning">Update</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('partials/_footer'); -%>
